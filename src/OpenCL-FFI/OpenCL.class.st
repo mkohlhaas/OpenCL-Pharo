@@ -19,7 +19,7 @@ OpenCL class >> ffiLibrary [
 	^ OpenCLLib
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'ffi-calls' }
 OpenCL class >> getDeviceIDs: platform deviceType: device_type numEntries: num_entries deviceId: devices numDevices: numDevices [
 
 	^ self ffiCall: #(cl_int clGetDeviceIDs ( cl_platform_id platform,
@@ -32,7 +32,7 @@ OpenCL class >> getDeviceIDs: platform deviceType: device_type numEntries: num_e
 	
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'ffi-calls' }
 OpenCL class >> getPlatformIDs: num_entries platforms: platforms num_platforms: num_platforms [
 
 	^ self ffiCall: #( cl_int clGetPlatformIDs ( cl_uint          num_entries ,
