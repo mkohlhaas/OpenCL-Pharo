@@ -2,11 +2,8 @@ Class {
 	#name : #OpenCLTypeAliases,
 	#superclass : #OpenCLTypes,
 	#classVars : [
-		'cl_int'
-	],
-	#classInstVars : [
-		'cl_int',
-		'cl_uint'
+		'Cl_int',
+		'Cl_uint'
 	],
 	#category : #'OpenCL-FFI-OpenCL-FFI'
 }
@@ -14,6 +11,6 @@ Class {
 { #category : #'class initialization' }
 OpenCLTypeAliases class >> initialize [
 
-	cl_int := #int.
-	cl_uint := #unsignedLong
+	Cl_int := #int.
+	Cl_uint := #uint
 ]
