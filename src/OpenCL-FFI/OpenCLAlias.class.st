@@ -2,8 +2,8 @@ Class {
 	#name : #OpenCLAlias,
 	#superclass : #OpenCLTypes,
 	#classVars : [
-		'Cl_int',
-		'Cl_uint'
+		'cl_int',
+		'cl_uint'
 	],
 	#category : #'OpenCL-FFI-OpenCL-FFI'
 }
@@ -11,6 +11,6 @@ Class {
 { #category : #'class initialization' }
 OpenCLAlias class >> initialize [
 
-	Cl_int := #int.
-	Cl_uint := #uint
+	cl_int := #int32.
+	cl_uint := #uint32
 ]

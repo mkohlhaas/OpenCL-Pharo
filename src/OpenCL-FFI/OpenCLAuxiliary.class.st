@@ -2,7 +2,7 @@ Class {
 	#name : #OpenCLAuxiliary,
 	#superclass : #OpenCLTypes,
 	#classVars : [
-		'Char64Array'
+		'char64Array'
 	],
 	#category : #'OpenCL-FFI-OpenCL-FFI'
 }
@@ -10,5 +10,5 @@ Class {
 { #category : #'class initialization' }
 OpenCLAuxiliary class >> initialize [
 
-	Char64Array := FFIArray newArrayTypeOf: #char size: 64
+	char64Array := FFIArray newArrayTypeOf: #char size: 64
 ]

@@ -35,5 +35,5 @@ OpenCLFn class >> getDeviceIDs: platform deviceType: device_type numEntries: num
 { #category : #'ffi-calls' }
 OpenCLFn class >> getPlatformIDs: num_entries platforms: platforms numPlatforms: num_platforms [
 
-	^ self ffiCall:	#( Cl_int clGetPlatformIDs ( Cl_uint num_entries , Cl_platform_id * platforms , Cl_uint * num_platforms ) )
+	^ self ffiCall:	#( cl_int clGetPlatformIDs ( cl_uint num_entries , cl_platform_id * platforms , cl_uint * num_platforms ) )
 ]

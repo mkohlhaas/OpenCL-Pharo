@@ -8,8 +8,7 @@ Class {
 OpenCLPlatform class >> count [
 
 	| errorCode num_platforms |
-	num_platforms := ExternalAddress allocate:
-		                 FFIExternalType pointerSize.
+	num_platforms := ExternalAddress newPointer.
 	errorCode := OpenCLFn
 		             getPlatformIDs: 0
 		             platforms: ExternalAddress null
@@ -20,12 +19,17 @@ OpenCLPlatform class >> count [
 { #category : #accessing }
 OpenCLPlatform class >> list [
 
-	| errorCode num_platforms platforms |
-	num_platforms := ExternalAddress allocate: FFIExternalType pointerSize.
-	platforms := ExternalAddress allocate: FFIExternalType pointerSize.
+	| errorCode platforms numPlatforms p count |
+	count := self count.
+	count <= 0 ifTrue: [ ^ self error: 'No platforms found.' ].
+	platforms := ExternalAddress newPointer.
+	numPlatforms := ExternalAddress newPointer.
 	errorCode := OpenCLFn
-		             getPlatformIDs: 0
+		             getPlatformIDs: count
 		             platforms: platforms
-		             numPlatforms: num_platforms.
-	^ platforms
+		             numPlatforms: numPlatforms.
+	count := numPlatforms uint32AtOffset: 0.
+	p := OrderedCollection new.
+	1 to: count do: [ :i | platforms add: (platforms pointerAt: i) ].
+	^ p
 ]

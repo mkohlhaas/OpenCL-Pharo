@@ -2,7 +2,7 @@ Class {
 	#name : #OpenCLOpaque,
 	#superclass : #OpenCLTypes,
 	#classVars : [
-		'Cl_platform_id'
+		'cl_platform_id'
 	],
 	#category : #'OpenCL-FFI-OpenCL-FFI'
 }
@@ -10,5 +10,5 @@ Class {
 { #category : #'class initialization' }
 OpenCLOpaque class >> initialize [
 
-	Cl_platform_id := #FFIOpaqueObject
+	cl_platform_id := #FFIOpaqueObject
 ]
