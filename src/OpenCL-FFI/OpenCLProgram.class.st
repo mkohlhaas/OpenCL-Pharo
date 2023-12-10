@@ -1,5 +1,5 @@
 Class {
 	#name : #OpenCLProgram,
-	#superclass : #OpenCL,
+	#superclass : #OpenCLExecution,
 	#category : #'OpenCL-FFI'
 }

@@ -1,5 +1,5 @@
 Class {
 	#name : #OpenCLDevice,
-	#superclass : #OpenCL,
+	#superclass : #OpenCLSetup,
 	#category : #'OpenCL-FFI'
 }

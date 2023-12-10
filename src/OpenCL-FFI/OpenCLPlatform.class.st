@@ -1,5 +1,5 @@
 Class {
 	#name : #OpenCLPlatform,
-	#superclass : #OpenCL,
+	#superclass : #OpenCLSetup,
 	#category : #'OpenCL-FFI'
 }

@@ -1,5 +1,5 @@
 Class {
-	#name : #OpenCLContext,
+	#name : #OpenCLCmdQueue,
 	#superclass : #OpenCLSetup,
 	#category : #'OpenCL-FFI'
 }

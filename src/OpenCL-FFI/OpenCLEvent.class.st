@@ -1,5 +1,5 @@
 Class {
 	#name : #OpenCLEvent,
-	#superclass : #OpenCL,
+	#superclass : #OpenCLSynchronization,
 	#category : #'OpenCL-FFI'
 }

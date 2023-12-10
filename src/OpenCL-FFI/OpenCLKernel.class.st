@@ -1,5 +1,5 @@
 Class {
 	#name : #OpenCLKernel,
-	#superclass : #OpenCL,
+	#superclass : #OpenCLExecution,
 	#category : #'OpenCL-FFI'
 }

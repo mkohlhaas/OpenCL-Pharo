@@ -1,5 +1,5 @@
 Class {
-	#name : #OpenCLCommandQueue,
+	#name : #OpenCLExecution,
 	#superclass : #OpenCL,
 	#category : #'OpenCL-FFI'
 }
