@@ -21,8 +21,7 @@ OpenCLPlatform class >> count [
 OpenCLPlatform class >> list [
 
 	| errorCode num_platforms platforms |
-	num_platforms := ExternalAddress allocate:
-		                 FFIExternalType pointerSize.
+	num_platforms := ExternalAddress allocate: FFIExternalType pointerSize.
 	platforms := ExternalAddress allocate: FFIExternalType pointerSize.
 	errorCode := OpenCLFn
 		             getPlatformIDs: 0
