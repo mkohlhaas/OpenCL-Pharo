@@ -1,5 +1,5 @@
 Class {
 	#name : #OpenCLSampler,
-	#superclass : #OpenCLMemory,
+	#superclass : #OpenCLStructures,
 	#category : #'OpenCL-FFI'
 }

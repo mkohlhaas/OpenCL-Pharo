@@ -2,25 +2,25 @@
 Entry point for all functions from the C library.
 "
 Class {
-	#name : #OpenCLCore,
+	#name : #OpenCLFn,
 	#superclass : #Object,
 	#pools : [
-		'OpenCLAuxiliaryTypes',
+		'OpenCLAlias',
+		'OpenCLAuxiliary',
 		'OpenCLEnums',
-		'OpenCLOpaqueTypes',
-		'OpenCLTypeAliases'
+		'OpenCLOpaque'
 	],
 	#category : #'OpenCL-FFI-OpenCL-FFI'
 }
 
 { #category : #accessing }
-OpenCLCore class >> ffiLibrary [
+OpenCLFn class >> ffiLibrary [
 
 	^ OpenCLLib
 ]
 
 { #category : #'ffi-calls' }
-OpenCLCore class >> getDeviceIDs: platform deviceType: device_type numEntries: num_entries deviceId: devices numDevices: numDevices [
+OpenCLFn class >> getDeviceIDs: platform deviceType: device_type numEntries: num_entries deviceId: devices numDevices: numDevices [
 
 	^ self ffiCall: #(cl_int clGetDeviceIDs ( cl_platform_id platform,
 	                                          cl_device_type device_type,
@@ -33,7 +33,7 @@ OpenCLCore class >> getDeviceIDs: platform deviceType: device_type numEntries: n
 ]
 
 { #category : #'ffi-calls' }
-OpenCLCore class >> getPlatformIDs: num_entries platforms: platforms numPlatforms: num_platforms [
+OpenCLFn class >> getPlatformIDs: num_entries platforms: platforms numPlatforms: num_platforms [
 
 	^ self ffiCall:	#( Cl_int clGetPlatformIDs ( Cl_uint num_entries , Cl_platform_id * platforms , Cl_uint * num_platforms ) )
 ]

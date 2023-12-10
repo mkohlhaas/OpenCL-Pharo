@@ -1,14 +1,14 @@
 Class {
-	#name : #OpenCLOpaqueTypes,
+	#name : #OpenCLAuxiliary,
 	#superclass : #OpenCLTypes,
 	#classVars : [
-		'Cl_platform_id'
+		'Char64Array'
 	],
 	#category : #'OpenCL-FFI-OpenCL-FFI'
 }
 
 { #category : #'class initialization' }
-OpenCLOpaqueTypes class >> initialize [
+OpenCLAuxiliary class >> initialize [
 
-	Cl_platform_id := #FFIOpaqueObject
+	Char64Array := FFIArray newArrayTypeOf: #char size: 64
 ]

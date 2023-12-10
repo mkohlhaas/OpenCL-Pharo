@@ -1,5 +1,5 @@
 Class {
-	#name : #OpenCLTypeAliases,
+	#name : #OpenCLAlias,
 	#superclass : #OpenCLTypes,
 	#classVars : [
 		'Cl_int',
@@ -9,7 +9,7 @@ Class {
 }
 
 { #category : #'class initialization' }
-OpenCLTypeAliases class >> initialize [
+OpenCLAlias class >> initialize [
 
 	Cl_int := #int.
 	Cl_uint := #uint
